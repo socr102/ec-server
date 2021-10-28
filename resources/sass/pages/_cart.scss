@@ -1,0 +1,104 @@
+.cart-page {
+    .dish-list {
+        margin-top: 15px;
+        .dish-item {
+            margin-bottom: 20px;
+            background: white;
+            box-shadow: 0 0 0.5rem #00000018;
+            border-radius: 15px;
+            padding: 10px 15px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            position: relative;
+            .info-col {
+                width: 100%;
+                padding-left: 26px;
+                .food__chef {
+                    font-size: 10.5px;
+                    font-family: $poppins;
+                    margin-bottom: 5px;
+                    font-weight: 500;
+                }
+                .food__name {
+                    font-family: $poppins;
+                    font-size: 13px;
+                    font-weight: 700;
+                    margin-bottom: 7px;
+                    width: fit-content;
+                }
+                .quantity {
+                    margin-top: 9px;
+                    display: flex;
+                    align-items: center;
+                    button {
+                        @include dark-gradient;
+                        font-size: 8px;
+                        border-radius: 50%;
+                        width: 21px;
+                        height: 21px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    input {
+                        height: 21px;
+                        width: 75px;
+                        margin-right: 0.5rem;
+                        margin-left: 0.5rem;
+                        border: none;
+                        border-bottom: 1px solid #ededed;
+                        outline: none;
+                        text-align: center;
+                        font-family: $poppins;
+                        font-size: 13px;
+                        transition: 0.2s;
+                        &:focus {
+                            border-color: $primary-dark;
+                        }
+                    }
+                }
+            }
+            .img-col {
+                width: 80px;
+                height: 80px;
+                flex: 0 0 80px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                }
+            }
+            .rangking {
+                top: 0;
+                left: 0;
+                position: absolute;
+                padding-left: 12px;
+                padding-right: 12px;
+                padding-top: 0.3rem;
+                padding-bottom: 0.3rem;
+                background: $primary-dark;
+                font-size: 13px;
+                font-family: $poppins;
+                font-weight: 600;
+                border-top-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+                color: $primary;
+            }
+        }
+    }
+    .checkout-button {
+        button {
+            background: $primary-dark;
+            width: 100%;
+            padding: 8px 0;
+            border-radius: 15px;
+            font-weight: 500;
+            font-size: 13px;
+            font-family: $poppins;
+            color: white;
+            transition: 0.3s;
+        }
+    }
+}

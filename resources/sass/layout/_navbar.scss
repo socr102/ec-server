@@ -1,0 +1,244 @@
+.header {
+	transition: all 0.5s;
+	z-index: 997;
+	padding: 20px 0;
+	background: #fff;
+	padding: 15px 0;
+	box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+	@media(min-width: 992px){
+		padding: 13px 0;
+	}
+	.logo {
+		line-height: 0;
+		text-decoration: none;
+		img {
+			max-height: 45px;
+			margin-right: 6px;
+		}
+		span {
+			font-size: 23px;
+			font-weight: 600;
+			color: $primary;
+			font-family: $poppins;
+			margin-left: 10px;
+			margin-top: 3px;
+		}
+	}
+}
+.navbar {
+	padding: 0;
+	ul {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		list-style: none;
+		align-items: center;
+	}
+	li {
+		position: relative;
+		&:hover {
+			>a {
+				color: $primary;
+			}
+		}
+	}
+	a {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 10px 0 10px 30px;
+		font-family: $poppins;
+		font-size: 15px;
+		font-weight: 500;
+		color: black;
+        text-decoration: none;
+		white-space: nowrap;
+		transition: 0.3s;
+		i {
+			font-size: 12px;
+			line-height: 0;
+			margin-left: 5px;
+		}
+		&:hover {
+			color: $primary;
+		}
+        &.active {
+            color: $primary;
+        }
+        &.button {
+            background-color: #232323;
+            text-transform: uppercase;
+            padding: 10px 40px;
+            margin-left: 15px;
+            border-radius: 50rem;
+            font-size: 12.5px;
+            color: #fff;
+			i {
+				margin-left: 8px;
+			}
+			&:not(.active){
+				background-color: #f7f7f7;
+				color: #232323;
+				box-shadow: 0px 2px 20px rgb(0, 0, 0, 0.15);
+			}
+            &.dark-grad {
+                color: #fff;
+                background: black;
+            }
+            &.primary-grad {
+                @include primary-gradient;
+            }
+        }
+	}
+	.dropdown {
+		ul {
+			display: block;
+			position: absolute;
+			left: 14px;
+			top: calc(100% + 30px);
+			margin: 0;
+			padding: 10px 0;
+			z-index: 99;
+			opacity: 0;
+			visibility: hidden;
+			background: #fff;
+			box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+			transition: 0.3s;
+			border-radius: 4px;
+			li {
+				min-width: 200px;
+				&:hover {
+					>a {
+						color: $primary;
+					}
+				}
+			}
+			a {
+				padding: 10px 20px;
+				font-size: 15px;
+				text-transform: none;
+				font-weight: 600;
+				i {
+					font-size: 12px;
+				}
+				&:hover {
+					color: $primary;
+				}
+			}
+			.active {
+				&:hover {
+					color: $primary;
+				}
+			}
+		}
+		&:hover {
+			>ul {
+				opacity: 1;
+				top: 100%;
+				visibility: visible;
+			}
+		}
+		.dropdown {
+			ul {
+				top: 0;
+				left: calc(100% - 30px);
+				visibility: hidden;
+			}
+			&:hover {
+				>ul {
+					opacity: 1;
+					top: 0;
+					left: 100%;
+					visibility: visible;
+				}
+			}
+		}
+	}
+}
+.navbar-dashboard {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: white;
+	z-index: 1020;
+	padding: 13px 12px;
+	box-shadow: 0 0.1rem 0.3rem #00000013;
+	&-menu{
+		list-style: none;
+		margin-bottom: 0;
+		font-family: $poppins;
+		.dropdown-toggle{
+			color: #444444;
+			&::after{
+				position: absolute;
+				right: -15px;
+				top: 0;
+				bottom: 0;
+				width: max-content;
+				height: max-content;
+				margin: auto;
+			}
+		}
+
+		.dropdown-menu{
+			transform: translate(0px, 70px) !important;
+			position: fixed !important;
+			right: 10px !important;
+			left: unset !important;
+			top: -13px !important;
+			.dropdown-item{
+				font-size: 14px;
+			}
+		}
+		@media(min-width: 992px){
+			display: flex;
+		}
+		.btn-dark-grad{
+			@media(max-width: 992px){
+				display: none;
+			}
+		}
+	}
+	
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.navbar-brand {
+			padding: 0;
+			img {
+				max-height: 33px;
+			}
+		}
+		.profile {
+			display: flex;
+			align-items: center;
+			@media(min-width: 992px){
+				display: none;
+			}
+			.img {
+				background-position: center;
+				background-size: cover;
+				height: 35px;
+				width: 35px;
+				border-radius: 50%;
+				box-shadow: 0 0 0 2px #00000013;
+			}
+			p {
+				margin-bottom: 0;
+				font-family: $poppins;
+				font-size: 13px;
+				margin-right: 10px;
+				span {
+					font-weight: 500;
+				}
+			}
+		}
+	}
+}
+
+@media(max-width: 768px) {
+    .header {
+        display: none;
+    }
+}

@@ -1,0 +1,163 @@
+.order-confirmation {
+    .check-hold {
+        margin: 20px auto 30px;
+        width: 55px;
+        height: 50px;
+        padding: 12px 15px;
+        background-color: $primary-dark;
+        border-radius: 10px;
+        border-top-right-radius: 0px;
+        img {
+            width: 100%;
+            @include filter;
+        }
+    }
+    .dash-fill {
+        text-align: center;
+        h5 {
+            font-size: 22px;
+            font-family: $poppins;
+            font-weight: 700;
+            line-height: 31px;
+            margin-top: 30px;
+        }
+        p {
+            font-size: 18px;
+            font-family: $poppins;
+            font-weight: 600;
+            color: grey;
+            margin-top: 15px;
+        }
+    }
+    .checkout-button {
+        background: $primary-dark;
+        display: block;
+        width: 100%;
+        padding: 8px 0;
+        border-radius: 15px;
+        font-weight: 500;
+        font-size: 13px;
+        font-family: $poppins;
+        color: white;
+        transition: 0.3s;
+    }
+    .order-detail-topic {
+        box-shadow: 0 0.1rem 0.3rem #00000013;
+        border-radius: 10px;
+        margin-top: 30px;
+        .head {
+            background: $primary-dark;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            padding: 10px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h5 {
+                margin-top: 0;
+                font-size: 12px;
+                font-family: $poppins;
+                font-weight: 500;
+                margin-bottom: 0;
+                color: white;
+            }
+            a {
+                padding: 3px 15px;
+                font-size: 9.2px;
+                font-family: $poppins;
+                border-radius: 50rem;
+                background-color: $primary-dark-light;
+                color: white;
+            }
+        }
+        .body {
+            padding: 13px 16px;
+            background-color: #fff;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            .info-row {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 7px;
+                &.input {
+                    margin-bottom: 10px;
+                    input {
+                        height: 20px;
+                        width: 120px;
+                        padding: 6px 0;
+                        font-size: 10px;
+                        border: none;
+                        border-bottom: 1px solid #ededed;
+                        border-radius: 0;
+                        &:focus {
+                            box-shadow: none;
+                        }
+                    }
+                }
+                &.block {
+                    display: block;
+                    margin-bottom: 18px;
+                    h5 {
+                        font-size: 11px;
+                        font-weight: 600;
+                    }
+                    p {
+                        margin-top: 5px;
+                        font-size: 10px;
+                    }
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                h5 {
+                    margin-top: 0;
+                    font-size: 12px;
+                    font-family: $poppins;
+                    font-weight: 500;
+                    margin-bottom: 0;
+                }
+                p {
+                    margin-top: 0;
+                    font-size: 12px;
+                    font-weight: 400;
+                    font-family: $poppins;
+                    margin-bottom: 0;
+                }
+                &.final {
+                    margin-top: 7px;
+                }
+            }
+            .add-line {
+                display: flex;
+                align-items: center;
+                .line {
+                    height: 1px;
+                    background-color: #8c8c8c;
+                    width: 100%;
+                }
+                ion-icon {
+                    margin-left: 5px;
+                    color: black;
+                }
+            }
+            .left {
+                flex: 0 0 70px;
+                width: 70px;
+                text-align: center;
+                padding-right: 6px;
+                border-right: 1px solid #d3d3d3;
+                margin-right: 12px;
+                p {
+                    font-size: 8px;
+                    font-family: $poppins;
+                    margin-bottom: 5px;
+                    font-weight: 600;
+                }
+                img {
+                    width: 45px;
+                }
+            }
+        }
+    }
+}

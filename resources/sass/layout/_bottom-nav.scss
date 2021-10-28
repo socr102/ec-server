@@ -1,0 +1,41 @@
+.bottom-nav {
+    width: 100%;
+    background: #fff;
+	position: fixed;
+	width: 100%;
+	background: white;
+	z-index: 1020;
+    bottom: 0;
+	box-shadow: 0 -0.1rem 0.3rem #00000013;
+    @media(min-width: 992px){
+        display: none;
+    }
+    .nav-row {
+        .nav-col {
+            .nav-item {
+                display: block;
+                padding: 10px 0;
+                text-align: center;
+                height: fit-content;
+                color: $primary-dark-light;
+                i {
+                    font-size: 17px;
+                }
+                p {
+                    font-size: 11px;
+                    font-family: $poppins;
+                    font-weight: 600;
+                    margin-bottom: 0;
+                }
+                &.active {
+                    i {
+                        @include text-gradient;
+                    }
+                    p {
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}

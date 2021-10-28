@@ -1,0 +1,105 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $open-sans;
+    color: #444444;
+}
+
+a {
+    color: #3b4ef8;
+}
+
+a:hover {
+    color: #6c7afa;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $poppins;
+}
+
+button {
+    outline: none;
+    border: none;
+    &:focus {
+        outline: none;
+    } 
+}
+
+/*--------------------------------------------------------------
+# Disable aos animation delay on mobile devices
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+    [data-aos-delay] {
+        transition-delay: 0 !important;
+    }
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.section-bg {
+    background-color: #f3f5fa;
+}
+
+.section-title {
+    text-align: center;
+    padding-bottom: 30px;
+    h2 {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        position: relative;
+        color: $primary;
+        font-family: $krub;
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 120px;
+            height: 1px;
+            background: #ddd;
+            bottom: 1px;
+            left: calc(50% - 60px);
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 40px;
+            height: 3px;
+            background: $primary-light;
+            bottom: 0;
+            left: calc(50% - 20px);
+        }
+    }
+    h3 {
+        text-align: left;
+        font-weight: 700;
+        font-size: 32px;
+    }
+}
+
+.section-title p {
+    margin-bottom: 0;
+}
+
+// disabled input
+.form-control:disabled, .form-control[readonly] {
+    background-color: #fff;
+    border: none !important;
+}
+
+// tab
+.tab2{ display:none;}

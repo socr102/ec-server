@@ -1,0 +1,146 @@
+.person-list-page {
+    .navigator-row {
+        margin-top: 5px;
+        margin-bottom: 35px;
+        background: $primary-dark;
+        border-radius: 50rem;
+        margin-left: 10px;
+        margin-right: 10px;
+        & > a {
+            color: white;
+            text-align: center;
+            padding: 8px 0;
+            font-size: 10.5px;
+            font-family: $poppins;
+            border-radius: 50rem;
+            &.active {
+                @include primary-gradient;
+                box-shadow: 0 0.1rem 0.3rem lighten($primary, 10%);
+                color: black;
+                font-weight: 600;
+                transform: scale(1.08);
+            }
+        }
+        @media(min-width: 992px){
+            width: 350px;
+            margin: 0 auto 30px;
+        }
+    }
+    .empty-list{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        p{
+            margin-bottom: 0;
+            padding-bottom: 40px;
+        }
+    }
+    .person-list {
+        margin-top: 15px;
+        .person-item {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            box-shadow: 0 0 0.3rem #00000013;
+            border-radius: 15px;
+            color: black;
+            img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+            }
+            .info-col {
+                margin-left: 15px;
+                h5 {
+                    font-size: 13px;
+                    font-family: $poppins;
+                    font-weight: 600;
+                    margin-bottom: 5px;
+                }
+                p {
+                    font-size: 12px;
+                    margin-bottom: 0;
+                    font-family: $poppins;
+                    span {
+                        font-weight: 500;
+                        color: #000;
+                    }
+                }
+                .promote {
+                    margin-top: 5px;
+                    background-color: $primary-dark;
+                    color: white;
+                    border-radius: 5px;
+                    padding: 4px 20px;
+                    font-size: 10px;
+                    font-family: $poppins;
+                    font-weight: 500;
+                    letter-spacing: 0.35px;
+                    span {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+        @media(min-width: 992px){
+            .person-item {
+                margin-bottom: 0;
+                background: #f8f8f8;
+                border-radius: 0;
+                padding: 13px 18px;
+                box-shadow: none;
+                border-bottom: 2px solid #d6d6d6;
+                &:nth-child(2n) {
+                    background: #fefefe;
+                } 
+                .img-col {
+                    img {
+                        width: 43px;
+                        height: 43px;
+                        box-shadow: 0 0.1rem 0.3rem #00000018;
+                    }
+                }
+                .info-col {
+                    width: 100%;
+                    margin-left: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    h5, h6, p {
+                        display: block;
+                        width: fit-content;
+                        min-width: 200px;
+                        position: relative;
+                        font-size: 12.5px;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    h5 {
+                        font-size: 13px;
+                        font-weight: 600;
+                        &::after {
+                            display: none;
+                        }
+                    }
+                    p {
+                        order: 2;
+                        text-align: right;
+                    }
+                    h6 {
+                        order: 3;
+                        text-align: right;
+                    }
+                    .promote {
+                        width: 140px;
+                        padding: 8px 25px;
+                        border-radius: 500rem;
+                        order: 3;
+                    }
+                }
+            }
+        }
+    }
+}

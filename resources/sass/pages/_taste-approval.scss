@@ -1,0 +1,162 @@
+.taste-approval {
+    .navigator-row {
+        margin-top: 5px;
+        margin-bottom: 25px;
+        margin-left: 10px;
+        margin-right: 10px;
+        background: $primary-dark;
+        border-radius: 50rem;
+        & > a {
+            color: white;
+            text-align: center;
+            padding: 6px 0;
+            font-size: 9.5px;
+            font-family: $poppins;
+            border-radius: 50rem;
+            &.active {
+                @include primary-gradient;
+                box-shadow: 0 0.1rem 0.3rem lighten($primary, 10%);
+                color: black;
+                font-weight: 600;
+                transform: scale(1.1);
+            }
+        }
+    }
+    .card {
+        background: white;
+        box-shadow: 0 0 0.5rem #00000018;
+        border-radius: 30px;
+        padding: 20px 15px;
+        border: none;
+        margin-top: 12px;
+        @media(min-width: 992px){
+            box-shadow: unset;
+            margin-top: unset;
+        }
+        .food__name {
+            font-size: 15px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            text-align: center;
+        }
+        img {
+            border: 2px solid $primary-dark;
+            border-radius: 15px;
+            background-color: $primary-dark;
+            @media(min-width: 992px){
+                max-width: 40%;
+                margin: auto;
+                margin-bottom: 18px;
+                border: 0;
+            }
+        }
+        .desc {
+            margin-top: 20px;
+            @media(min-width: 992px){
+                max-width: 60%;
+                margin: auto;
+                margin-bottom: 15px;
+            }
+            p {
+                margin: 0 auto;
+                font-size: 12px;
+                letter-spacing: 1.6;
+                font-family: $poppins;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                u {
+                    font-weight: 500;
+                }
+            }
+        }
+        .button-row {
+            margin-top: 20px;
+            display: flex;
+            button {
+                width: 50%;
+                padding: 6px 0;
+                background-color: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                p {
+                    margin-bottom: 0;
+                    font-size: 11px;
+                    font-family: $poppins;
+                    margin-left: 7px;
+                }
+                &.black {
+                    background-color: $primary-dark;
+                    border-radius: 30px;
+                    margin-right: 3px;
+                }
+                &.grey {
+                    border-radius: 30px;
+                    background-color: $primary-dark-light;
+                    margin-left: 3px;
+                }
+            }
+        }
+    }
+
+    .card-const{
+        @media(min-width: 992px){
+            display: flex;
+            align-items: flex-start; 
+            margin-bottom: 25px;
+            &-attachment{
+                flex-basis: 40%;
+                max-width: 40%;
+                padding-left: 25px;
+                img{
+                    max-width: 100% !important;
+                }
+            }
+            .desc{
+                height: 100%;
+                flex-basis: 60%;
+                width: 60%;
+                margin: unset !important;
+                padding-left: 25px;
+                padding-top: 15px;
+                height: 240px;
+                overflow-y: auto;
+                @include webkit-scrollbar;
+            }
+            .cameratag{
+                height: 226px !important;
+                border-radius: 15px;
+                overflow: hidden;
+                margin-bottom: 18px;
+                .jwplayer{
+                    height: 100% !important;
+                }
+            }
+        }
+        img{
+            width: 100%;
+        }
+    }
+}
+
+@media(min-width: 992px){
+    .taste-approval {
+        .taste-approval-tab{
+            width: 350px;
+        }
+        .card {
+            .button-row {
+                margin-top: 0;
+                width: 100%;
+                display: block;
+                button {
+                    width: 100%;
+                    padding: 9px 0;
+                    margin-bottom: 12px;
+                }
+            }
+        }
+    }
+}

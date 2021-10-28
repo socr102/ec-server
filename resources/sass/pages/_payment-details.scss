@@ -1,0 +1,17 @@
+.payment-details {
+    .option-hold {
+        margin-bottom: 40px;
+        text-align: center;
+        .option-img {
+            width: 140px;
+            margin-bottom: 12px;
+            border-radius: 10px;
+        }
+        h5 {
+            font-size: 14px;
+            font-family: $poppins;
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.home-navigator, .order-navigator {
+    width: 80% !important;
+    background: #fff;
+	position: fixed;
+	width: 100%;
+	background: white;
+	z-index: 1020;
+    bottom: 70px;
+    left: 10%;
+    border-radius: 50rem;
+	box-shadow: 0 1rem 3rem #0000002d;
+    @media(min-width: 992px){
+        display: none;
+    }
+    .nav-row {
+        margin: 0;
+        .nav-col {
+            flex: 0 0 25%;
+            max-width: 25%;
+            .nav-item {
+                display: block;
+                padding: 7px 0;
+                text-align: center;
+                height: fit-content;
+                color: black;
+                i {
+                    font-size: 17px;
+                    color: $primary-dark-light;
+                }
+                &.active {
+                    i {
+                        color: $primary-orange;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.order-navigator {
+    .nav-row {
+        .nav-col {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+    }
+}

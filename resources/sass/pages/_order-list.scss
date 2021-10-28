@@ -1,0 +1,98 @@
+.order-list-page {
+    .notif-list {
+        margin-top: -20px;
+        .notif-item {
+            margin-top: 20px;
+            background: white;
+            box-shadow: 0 0 0.5rem #00000023;
+            border-radius: 15px;
+            padding: 16px 15px;
+            display: flex;
+            align-items: center;
+            color: black;
+            position: relative;
+            .img-col {
+                margin-right: 15px;
+                .check-hold {
+                    width: 33px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 7px 8px;
+                    background-color: $primary-dark;
+                    border-radius: 10px;
+                    border-top-right-radius: 0;
+                    i {
+                        color: $primary;
+                    }
+                }
+            }
+            .info-col {
+                width: 100%;
+                position: relative;
+                h5 {
+                    width: 100%;
+                    font-size: 13px;
+                    font-family: $poppins;
+                    font-weight: 600;
+                    margin-bottom: 4px;
+                    &:after {
+                        content: '';
+                        margin-top: 6px;
+                        display: block;
+                        position: absolute;
+                        height: 1.5px;
+                        width: 30px;
+                        @include primary-gradient;
+                    }
+                    span {
+                        font-size: 10px;
+                        top: 0;
+                        right: 0;
+                        font-weight: 500;
+                        position: absolute;
+                        color: #898989;
+                    }
+                }
+                p {
+                    margin-top: 15px;
+                    font-size: 10px;
+                    font-family: $poppins;
+                    margin-bottom: 0;
+                    font-weight: 500;
+                }
+                .date {
+                    position: relative;
+                    margin-top: 3px;
+                    span {
+                        font-size: 10px;
+                        bottom: 0;
+                        right: 0;
+                        font-weight: 500;
+                        position: absolute;
+                        color: $primary-orange;
+                    }
+                }
+            }
+            .price {
+                top: 0;
+                right: 0;
+                position: absolute;
+                padding-left: 13px;
+                padding-right: 13px;
+                padding-top: 0.4rem;
+                padding-bottom: 0.4rem;
+                background: $primary-dark;
+                font-family: $poppins;
+                font-weight: 500;
+                border-top-right-radius: 10px;
+                text-align: center;
+                p {
+                    margin-bottom: 0;
+                    font-size: 12px;
+                    color: white;
+                }
+            }
+        }
+    }
+}

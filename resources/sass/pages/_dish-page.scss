@@ -1,0 +1,510 @@
+.dish-page {
+    .navigator-row {
+        margin-bottom: 45px;
+        background: $primary-dark;
+        border-radius: 50rem;
+        margin: 0px 0px 45px;
+        &.navigator-mobile{
+            width: 300px;
+            margin: 0px auto 40px;
+        }
+        & > a {
+            color: white;
+            text-align: center;
+            padding: 7px 0;
+            font-size: 10.5px;
+            font-family: $poppins;
+            border-radius: 50rem;
+            &.active {
+                @include primary-gradient;
+                box-shadow: 0 0.1rem 0.3rem lighten($primary, 10%);
+                color: black;
+                font-weight: 600;
+                // transform: scale(1.1);
+            }
+        }
+    }
+    .dish-item {
+        padding: 0px 10px;
+        @media(min-width: 992px){
+            .wrapper {
+                display: flex;
+            }
+        }
+        .competition-phase {
+            width: 85%;
+            margin: 0 auto;
+            .card {
+                background: #fff;
+                border-radius: 13px;
+                border: none;
+                box-shadow: 0 0 0.3rem #0000000e;
+                img {
+                    width: 100%;
+                    margin: auto;
+                    border-top-left-radius: 13px;
+                    border-top-right-radius: 13px;
+                }
+                .share-row {
+                    margin: 0;
+                    background: $primary-dark;
+                    border-bottom-left-radius: 13px;
+                    border-bottom-right-radius: 13px;
+                    & > div {
+                        padding: 7px 12px;
+                        display: flex;
+                        color: white;
+                        @media(min-width: 992px){
+                            padding: 6px 8px;
+                        }
+                        &.middle {
+                            background-color: $primary-dark-light;
+                        }
+                        .share-item {
+                            color: white;
+                            display: flex;
+                            align-items: center;
+                            width: fit-content;
+                            margin: 0 auto;
+                            p {
+                                font-family: $poppins;
+                                margin-bottom: 0;
+                                font-size: 11px;
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .competition-header {
+            margin-top: 30px;
+            text-align: center;
+            h5 {
+                font-size: 15px;
+                font-family: $poppins;
+                font-weight: 700;
+                margin-bottom: 7px;
+            }
+            p {
+                font-size: 13px;
+                font-family: $poppins;
+                margin-bottom: 0;
+            }
+            .info-span {
+                display: flex;
+                margin: 15px auto 0;
+                width: fit-content;
+                & div {
+                    padding: 6px 30px;
+                    font-size: 12px;
+                    font-family: $poppins;
+                    width: 50%;
+                    text-align: center;
+                    white-space: nowrap;
+                    &.black {
+                        background-color: $primary-dark;
+                        color: white;
+                        border-top-left-radius: 50rem;
+                        border-bottom-left-radius: 50rem;
+                    }
+                    &.primary {
+                        @include primary-gradient;
+                        border-top-right-radius: 50rem;
+                        border-bottom-right-radius: 50rem;
+                        color: black;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+        .competition-body {
+            margin-top: 25px;
+            .desc {
+                max-height: 160px;
+                overflow-y: auto;
+                padding-right: 7px;
+                @include webkit-scrollbar;
+
+                @media(min-width: 992px){
+                    max-height: 250px;
+                    overflow-y: auto;
+                }
+                p {
+                    font-size: 10px;
+                    font-family: $poppins;
+                    line-height: 1.5;
+                    letter-spacing: 0.36px;
+                    @media(min-width: 992px){
+                        font-size: 12px;
+                    }
+                }
+            }
+            .enroll {
+                margin-left: 12px;
+                width: 100%;
+                a {
+                    display: block;
+                    border-radius: 50rem;
+                    background-color: $primary-dark;
+                    color: white;
+                    font-family: $poppins;
+                    font-size: 11px;
+                    text-align: center;
+                    width: 100%;
+                    padding: 7px 40px;
+                    box-shadow: 0 0 0.9rem $primary-light;
+                    margin: auto;
+                    @media(max-width: 992px){
+                        width: 100%;
+                    }
+                }
+            }
+            .voting {
+                display: flex;
+                border-radius: 50px;
+                font-size: 11px;
+                padding: 7px 20px;
+                font-family: $poppins;
+                background-color: white;
+                box-shadow: 0 0 3px #00000013;
+                p {
+                    font-weight: 600;
+                    font-size: 10px;
+                    margin-bottom: 0;
+                    margin-right: 6px;
+                }
+                &.voted {
+                    color: #e93636;
+                    box-shadow: 0 0 6px #e28a8ab6;
+                }
+            }
+            .comment-box {
+                margin-top: 15px;
+                .add-comment-row {
+                    display: flex;
+                    margin-bottom: 25px;
+                    input {
+                        width: 100%;
+                        height: 35px;
+                        border: 2px solid #bbbbbb;
+                        border-radius: 8px;
+                        padding: 6px 12px;
+                        font-size: 11px;
+                        box-shadow: 0px 0px 5px #dadada, inset 2px 2px 3px #f3f3f3;
+                        &::placeholder {
+                            color: #c4c4c4;
+                        }
+                        &:focus {
+                            border-color: #808080;
+                            box-shadow: none;
+                            outline: none;
+                        }
+                    }
+                    button {
+                        margin-left: 10px;
+                        height: 35px;
+                        width: 35px;
+                        flex: 0 0 35px;
+                        background: $primary-dark-light;
+                        color: white;
+                        font-size: 11px;
+                        border-radius: 8px;
+                        padding: 6px;
+                    }
+                }
+                .comment-inner {
+                    .comment-row {
+                        margin-top: 12px;
+                        display: flex;
+                        .left {
+                            margin-right: 13px;
+                            img {
+                                width: 35px;
+                                height: 35px;
+                                border-radius: 50%;
+                            }
+                        }
+                        .right {
+                            text-align: left;
+                            h5 {
+                                font-size: 11px;
+                                font-family: $poppins;
+                                font-weight: 600;
+                                margin-bottom: 4px;
+                            }
+                            .desc {
+                                overflow-y: visible;
+                                height: auto;
+                                max-height: auto;
+                            }
+                            p {
+                                margin-bottom: 0;
+                                font-size: 9px;
+                                color: black;
+                                font-family: $nunito-sans;
+                            }
+                            h6 {
+                                font-size: 9px;
+                                font-family: $nunito-sans;
+                                color: grey;
+                                margin-top: 6px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 992px) {
+    .dish-page {
+        .base-page-card-content {
+            .asset-row {
+                .card-main-info {
+                    margin-bottom: 20px;
+                    background: white;
+                    box-shadow: 0 0 0.5rem #00000020;
+                    border-radius: 12px;
+                    padding: 15px 18px;
+                    width: 100%;
+                    .title {
+                        width: 100%;
+                        border-bottom: 1px solid #ededed;
+                        margin-bottom: 15px;
+                        h6 {
+                            font-size: 13px;
+                            font-weight: 400;
+                            color: #606060;
+                            padding-bottom: 8px;
+                            margin-bottom: 0;
+                        }
+                    }
+                    img {
+                        width: 100%;
+                        border-radius: 8px;
+                    }
+                    .info {
+                        text-align: center;
+                        margin-top: 20px;
+                        h5 {
+                            font-size: 14px;
+                            font-family: $poppins;
+                            font-weight: 600;
+                            margin-bottom: 5px;
+                        }
+                        p {
+                            font-size: 14px;
+                            font-family: $poppins;
+                            margin-bottom: 0;
+                            font-weight: 400;
+                            color: grey;
+                        }
+                        .info-span {
+                            display: flex;
+                            margin: 15px auto 0;
+                            width: fit-content;
+                            & div {
+                                padding: 5px 30px;
+                                font-size: 11px;
+                                font-family: $poppins;
+                                width: 50%;
+                                text-align: center;
+                                white-space: nowrap;
+                                &.black {
+                                    background-color: $primary-dark;
+                                    color: white;
+                                    border-top-left-radius: 50rem;
+                                    border-bottom-left-radius: 50rem;
+                                }
+                                &.primary {
+                                    @include primary-gradient;
+                                    border-top-right-radius: 50rem;
+                                    border-bottom-right-radius: 50rem;
+                                    color: black;
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    }
+                    .order {
+                        margin-top: 30px;
+                        padding-top: 8px;
+                        border-top: 1px solid #ededed;
+                        button, a {
+                            display: block;
+                            padding: 7px;
+                            width: 100%;
+                            background: $primary-dark;
+                            font-size: 11px;
+                            font-family: $poppins;
+                            color: white;
+                            border-radius: 500rem;
+                            box-shadow: 3px 3px 11px #0000002d, inset 0 0 5px lighten($primary-dark-light, 20%);
+                        }
+                    }
+                }
+            }
+            .desc-row {
+                margin-top: 30px;
+                .desc {
+                    width: 100%;
+                    color: black;
+                    font-size: 13px;
+                    font-family: $poppins;
+                }
+                .btn-grp {
+                    display: flex;
+                    border-radius: 8px;
+                    box-shadow: 0 0.1rem 0.3rem #00000013;
+                    & > form, button {
+                        width: 50%;
+                        & > button {
+                            width: 100%;
+                        }
+                    }
+                    .act-btn {
+                        font-size: 14px;
+                        font-family: $poppins;
+                        padding: 9px 20px;
+                        background: #ddd;
+                        border-radius: 8px;
+                        position: relative;
+                        i {
+                            margin-right: 8px;
+                        }
+                        &.left {
+                            border-top-right-radius: 0;
+                            border-bottom-right-radius: 0;
+                        }
+                        &.right {
+                            border-top-left-radius: 0;
+                            border-bottom-left-radius: 0;
+                            background: #fff;
+                        }
+                        .sharethis-inline-share-buttons {
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            .st-btn {
+                                display: none !important;
+                                &[data-network='sharethis'] {
+                                    width: 100%;
+                                    height: 38.8px !important;
+                                    display: block !important;
+                                    opacity: 0;
+                                    &:hover {
+                                        opacity: 0 !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .info-row {
+                margin-top: 10px;
+                padding-top: 15px;
+                border-top: 1px solid #ededed;
+                .section-title {
+                    text-align: left;
+                    font-size: 14px;
+                    font-weight: 600;
+                    padding-bottom: 0;
+                }
+                .section-inner {
+                    margin-top: 15px;
+                    .inner-row {
+                        display: flex;
+                        justify-content: space-between;
+                        h5 {
+                            font-size: 11.5px;
+                            font-weight: 500;
+                            color: black;
+                            margin-bottom: 5px;
+                        }
+                        p {
+                            font-size: 11.5px;
+                            margin-bottom: 5px;
+                            font-family: $poppins;
+                            color: grey;
+                        }
+                    }
+                }
+            }
+            .comment-box {
+                padding-top: 15px;
+                margin-top: 15px;
+                border-top: 1px solid #ededed;
+                .add-comment-row {
+                    display: flex;
+                    input {
+                        width: 100%;
+                        height: 37px;
+                        border: 2px solid #bbbbbb;
+                        border-radius: 8px;
+                        padding: 8px 14px;
+                        font-size: 12px;
+                        box-shadow: 0px 0px 5px #dadada, inset 2px 2px 3px #f3f3f3;
+                        &::placeholder {
+                            color: #c4c4c4;
+                        }
+                        &:focus {
+                            border-color: #808080;
+                            box-shadow: none;
+                            outline: none;
+                        }
+                    }
+                    button {
+                        margin-left: 10px;
+                        height: 37px;
+                        background: $primary-dark-light;
+                        color: white;
+                        font-size: 12px;
+                        border-radius: 8px;
+                        padding: 8px 20px;
+                    }
+                }
+                .comment-inner {
+                    .comment-row {
+                        margin-top: 12px;
+                        display: flex;
+                        align-items: center;
+                        .left {
+                            margin-right: 15px;
+                            img {
+                                width: 40px;
+                                height: 40px;
+                                border-radius: 50%;
+                            }
+                        }
+                        .right {
+                            text-align: left;
+                            h5 {
+                                font-size: 13.5px;
+                                font-family: $poppins;
+                                font-weight: 600;
+                                margin-bottom: 3px;
+                            }
+                            p {
+                                margin-bottom: 0;
+                                font-size: 13px;
+                                color: black;
+                                font-family: $nunito-sans;
+                            }
+                            h6 {
+                                font-size: 11px;
+                                font-family: $nunito-sans;
+                                color: grey;
+                                margin-top: 4px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,201 @@
+.competition {
+    .carouselCompetition {
+        .carousel-inner {
+            width: 83%;
+            margin: 0 auto;
+            .carousel-item {
+                .competition-phase {
+                    width: 85%;
+                    margin: 0 auto;
+                    padding: 10px 0;
+                    .card {
+                        background: #fff;
+                        border-radius: 13px;
+                        border: none;
+                        // box-shadow: 0 0 0.3rem #0000000e;
+                        img {
+                            width: 140px;
+                            margin: auto;
+                        }
+                        .share-row {
+                            margin: 0;
+                            background: $primary-dark;
+                            border-bottom-left-radius: 13px;
+                            border-bottom-right-radius: 13px;
+                            & > div {
+                                padding: 7px 12px;
+                                display: flex;
+                                color: white;
+                                &.middle {
+                                    background-color: $primary-dark-light;
+                                }
+                                .share-item {
+                                    display: flex;
+                                    align-items: center;
+                                    width: fit-content;
+                                    margin: 0 auto;
+                                    p {
+                                        font-family: $poppins;
+                                        margin-bottom: 0;
+                                        font-size: 11px;
+                                        margin-left: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .competition-header {
+                    margin-top: 8px;
+                    text-align: center;
+                    h5 {
+                        font-size: 15px;
+                        font-family: $poppins;
+                        font-weight: 700;
+                        margin-bottom: 7px;
+                    }
+                    p {
+                        font-size: 13px;
+                        font-family: $poppins;
+                        margin-bottom: 0;
+                    }
+                    .info-span {
+                        display: flex;
+                        margin: 15px auto 0;
+                        width: fit-content;
+                        max-width: 100%;
+                        & div {
+                            padding: 5px 18px;
+                            font-size: 8px;
+                            font-family: $poppins;
+                            width: 50%;
+                            text-align: center;
+                            white-space: nowrap;
+                            &.black {
+                                background-color: $primary-dark;
+                                color: white;
+                                border-top-left-radius: 50rem;
+                                border-bottom-left-radius: 50rem;
+                            }
+                            &.primary {
+                                @include primary-gradient;
+                                border-top-right-radius: 50rem;
+                                border-bottom-right-radius: 50rem;
+                                color: black;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+                .competition-body {
+                    margin-top: 25px;
+                    .desc {
+                        max-height: 160px;
+                        overflow-y: auto;
+                        @include webkit-scrollbar;
+                        p {
+                            font-size: 10px;
+                            font-family: $poppins;
+                            line-height: 1.5;
+                            letter-spacing: 0.36px;
+                        }
+                    }
+                }
+            }
+        }
+        .carousel-control {
+            width: 5%;
+            opacity: 1;
+            .carousel-control-icon {
+                filter: invert(4%) sepia(1%) saturate(502%) hue-rotate(314deg) brightness(96%) contrast(80%);
+            }
+        }
+    }
+    .enroll {
+        margin-top: 10px;
+        padding: 10px;
+        
+        a {
+            display: block;
+            border-radius: 8px;
+            background-color: $primary-dark;
+            color: white;
+            font-family: $poppins;
+            font-weight: 500;
+            font-size: 11px;
+            text-align: center;
+            width: max-content;
+            padding: 9px 45px;
+            box-shadow: 0 0 0.9rem $primary-light;
+            margin: auto;
+        }
+    }
+}
+
+@media(min-width: 992px) {
+    .competition {
+        .carouselCompetition {
+            .carousel-inner {
+                width: 90%;
+                .carousel-item {
+                    .competition-phase {
+                        width: 35%;
+                        margin: 0;
+                        .card {
+                            img {
+                                width: 170px;
+                            }
+                        }
+                    }
+                    .competition-wrapper{
+                        display: flex;
+                        flex-wrap: wrap;
+                        padding-bottom: 15px;
+                        align-items: center;
+                    }
+                    .competition-header {
+                        h5 {
+                            font-size: 16.5px;
+                        }
+                        p {
+                            font-size: 15px;
+                        }
+                        .info-span {
+                            display: flex;
+                            margin: 15px auto 0;
+                            width: fit-content;
+                            & div {
+                                padding: 6px 23px;
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                    .competition-body {
+                        margin-top: 25px;
+                        max-width: 60%;
+                        padding-left: 25px;
+                        .desc {
+                            max-height: 600px;
+                            overflow-y: auto;
+                            p {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+            .carousel-control {
+                width: 2%;
+            }
+        }
+        .enroll {
+            padding: 0;
+            margin-top: 0;
+            a {
+                width: fit-content;
+                padding: 11px 50px;
+                font-size: 12px;
+            }
+        }
+    }
+}

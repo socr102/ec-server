@@ -1,0 +1,31 @@
+@mixin primary-gradient {
+    background: linear-gradient(90deg, #FCE042 0%, $primary-orange 100%);
+    color: #ffffff;
+}
+
+@mixin dark-gradient {
+    background: linear-gradient(130deg, $primary-dark, lighten($primary-dark-light, 5%));
+    color: #ffffff;
+}
+
+@mixin text-gradient {
+    @include primary-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin filter {
+    filter: invert(78%) sepia(82%) saturate(403%) hue-rotate(349deg) brightness(105%) contrast(98%);
+}
+
+@mixin webkit-scrollbar {
+    &::-webkit-scrollbar {
+        border-radius: 500rem;
+        width: 6px;
+        background-color: #e4e4e4; /* or add it to the track */
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $primary-dark-light;
+        border-radius: 500rem;
+    }
+}

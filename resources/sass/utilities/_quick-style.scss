@@ -1,0 +1,196 @@
+// FONT FAMILY
+.krub {
+    font-family: $krub !important;
+}
+
+.nunito {
+    font-family: $nunito !important;
+}
+
+.nunito-sans {
+    font-family: $nunito-sans !important;
+}
+
+.open-sans {
+    font-family: $open-sans !important;
+}
+
+.poppins {
+    font-family: $poppins !important;
+}
+
+// WHITE SPACE 
+.ws-nowrap {
+    white-space: nowrap !important;
+}
+
+// LETTER SPACING
+.ls-0-5 {
+    letter-spacing: 0.5px !important;
+}
+
+// FONT SIZE
+
+.fsz-12 {
+    font-size: 12px !important;
+}
+
+.fsz-13 {
+    font-size: 13px !important;
+}
+
+.fsz-14 {
+    font-size: 14px !important;
+}
+
+.fsz-15 {
+    font-size: 15px !important;
+}
+
+.fsz-17 {
+    font-size: 17px !important;
+}
+
+.fsz-18 {
+    font-size: 18px !important;
+}
+
+.fsz-20 {
+    font-size: 20px !important;
+}
+
+.fsz-22 {
+    font-size: 22px !important;
+}
+
+.fsz-30 {
+    font-size: 30px !important;
+}
+
+// FONT WEIGHT
+.fw-500 {
+    font-weight: 500 !important;
+}
+
+.fw-600 {
+    font-weight: 600 !important;
+}
+
+.fw-700 {
+    font-weight: 700 !important;
+}
+
+// LINE HEIGHT
+.lh-2 {
+    line-height: 2 !important;
+}
+
+.lh-1-5 {
+    line-height: 1.5 !important;
+}
+
+// HEIGHT & WIDTH
+.h-fit-content {
+    height: fit-content !important;
+}
+
+.w-fit-content {
+    width: fit-content !important;
+}
+
+// Patless THEME
+.patles-color__primary {
+    color: $primary !important;
+}
+
+.patles-bg__primary {
+    background: $primary !important;
+}
+
+.patles-bg__primary-bg {
+    background: $primary-bg !important;
+}
+
+// REUSABLE STYLING
+.patles-sb {
+    font-weight: 600 !important;
+    color: $primary !important;
+}
+
+.filter-color {
+    filter: invert(78%) sepia(82%) saturate(403%) hue-rotate(349deg) brightness(105%) contrast(98%);
+}
+
+// Border Radius
+.b-20 {
+    border-radius: 20px !important;
+}
+
+// Margin
+.mt-50 {
+    margin-top: 50px !important;
+}
+
+.mt-60 {
+    margin-top: 60px !important;
+}
+
+.mt-70 {
+    margin-top: 70px !important;
+}
+
+// Button Styling
+.btn-arrow {
+    font-weight: 600 !important;
+    line-height: 22px !important;
+    position: relative !important;
+    transition-timing-function: cubic-bezier(.4,0,.2,1) !important;
+    transition-duration: .3s !important;
+    min-width: 44px !important;
+    padding: 0px !important;
+    font-family: $open-sans !important;
+    font-size: 15px !important;
+    .fa {
+        margin-left: 6px !important;
+        font-size: 13px !important;
+        color: $primary !important;
+        transition: 0.3s !important;
+    }
+    &:hover {
+        .fa {
+            margin-left: 11px !important;
+        }
+    }
+}
+
+.gradient-btn {
+    border: none !important;
+    background: linear-gradient(35deg, $primary, $primary-dark) !important;
+    color: white !important;
+    outline: none !important;
+}
+
+.btn-gradient-arrow {
+    font-weight: 600 !important;
+    line-height: 22px !important;
+    position: relative !important;
+    transition-timing-function: cubic-bezier(.4,0,.2,1) !important;
+    transition-duration: .3s !important;
+    min-width: 44px !important;
+    padding: 9px 30px !important;
+    font-family: $nunito !important;
+    border-radius: 15px;
+    font-size: 15px !important;
+    color: #fff !important;
+    background: linear-gradient(145deg, $primary, $primary-dark) !important;
+    .fa {
+        margin-left: 6px !important;
+        font-size: 13px !important;
+        transition: 0.3s !important;
+    }
+    &:hover {
+        .fa {
+            transform: translateX(5px) !important;
+        }
+    }
+}

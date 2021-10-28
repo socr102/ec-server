@@ -1,0 +1,125 @@
+.notification-list-page {
+    .notif-list {
+        margin-top: 15px;
+        .notif-item {
+            margin-bottom: 20px;
+            background: white;
+            box-shadow: 0 0 0.5rem #00000018;
+            border-radius: 15px;
+            padding: 16px 15px;
+            display: flex;
+            align-items: center;
+            color: black;
+            @media(min-width: 992px){
+                margin-bottom: 35px;
+            }
+            .img-col {
+                margin-right: 15px;
+                .check-hold {
+                    width: 33px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 7px 8px;
+                    background-color: $primary-dark;
+                    border-radius: 10px;
+                    border-top-right-radius: 0;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        @include filter;
+                    }
+                }
+            }
+            .info-col {
+                width: 100%;
+                position: relative;
+                h5 {
+                    width: 100%;
+                    font-size: 13px;
+                    font-family: $poppins;
+                    font-weight: 600;
+                    margin-bottom: 4px;
+                    position: relative;
+                    &:after {
+                        content: '';
+                        margin-top: 6px;
+                        display: block;
+                        position: absolute;
+                        height: 1.5px;
+                        width: 30px;
+                        background-color: $primary;
+                    }
+                }
+                h6 {
+                    font-size: 10px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    font-weight: 500;
+                    position: absolute;
+                    color: #898989;
+                }
+                p {
+                    margin-top: 15px;
+                    font-size: 12px;
+                    font-family: $poppins;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 992px) {
+    .notification-list-page {
+        .notif-list {
+            .notif-item {
+                margin-bottom: 0;
+                background: #f8f8f8;
+                border-radius: 0;
+                padding: 12px 18px;
+                box-shadow: none;
+                border-bottom: 2px solid #d6d6d6;
+                &:nth-child(2n) {
+                    background: #fefefe;
+                } 
+                .img-col {
+                    .check-hold {
+                        width: 30px;
+                        padding: 7px 8px;
+                    }
+                }
+                .info-col {
+                    margin-left: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    h5, h6, p {
+                        display: block;
+                        width: fit-content;
+                        min-width: 200px;
+                        position: relative;
+                        font-size: 12.5px;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    h5 {
+                        font-size: 13px;
+                        font-weight: 600;
+                        &::after {
+                            display: none;
+                        }
+                    }
+                    h6 {
+                        order: 3;
+                        text-align: right;
+                    }
+                    p {
+                        order: 2;
+                    }
+                }
+            }
+        }
+    }
+}

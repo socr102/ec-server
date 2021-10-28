@@ -1,0 +1,92 @@
+.order-history-page {
+    .notif-list {
+        margin-top: -20px;
+        .notif-item {
+            margin-top: 20px;
+            background: $primary-dark;
+            box-shadow: 0 0 0.5rem #00000023;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            color: black;
+            position: relative;
+            .info-col {
+                background-color: white;
+                border-top-left-radius: 15px;
+                border-bottom-left-radius: 15px;
+                padding: 13px 10px 13px 18px;
+                width: calc(100% - 90px);
+                position: relative;
+                h5 {
+                    width: 100%;
+                    font-size: 13px;
+                    font-family: $poppins;
+                    font-weight: 600;
+                    margin-bottom: 4px;
+                    &:after {
+                        content: '';
+                        margin-top: 6px;
+                        display: block;
+                        position: absolute;
+                        height: 1.5px;
+                        width: 30px;
+                        @include primary-gradient;
+                    }
+                    span {
+                        font-size: 10px;
+                        top: 0;
+                        right: 0;
+                        font-weight: 500;
+                        position: absolute;
+                        color: #898989;
+                    }
+                }
+                p {
+                    margin-top: 15px;
+                    font-size: 10px;
+                    font-family: $poppins;
+                    margin-bottom: 0;
+                    font-weight: 500;
+                }
+                .date {
+                    position: relative;
+                    margin-top: 3px;
+                    span {
+                        font-size: 10px;
+                        bottom: 0;
+                        right: 0;
+                        font-weight: 500;
+                        position: absolute;
+                        color: $primary-orange;
+                    }
+                }
+            }
+            .act-col {
+                width: 90px;
+                button {
+                    background-color: transparent;
+                    width: 100%;
+                    float: right;
+                    height: 100%;
+                    padding-left: 12px;
+                    padding-right: 12px;
+                    padding-top: 0.4rem;
+                    padding-bottom: 0.4rem;
+                    color: white;
+                    font-family: $poppins;
+                    font-size: 9.5px;
+                    text-align: left;
+                    align-items: center;
+                    display: flex;
+                    justify-content: space-between;
+                    i {
+                        float: right;
+                    }
+                    &.middle {
+                        background: $primary-dark-light;
+                    }
+                }
+            }
+        }
+    }
+}
